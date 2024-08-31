@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About The App</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: top;
+            align-items: center;
+            margin-top: 2%;
+            background-color: cadetblue;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 100px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            background-color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+
+        .navbar a.active {
+            background-color: #004080;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        p {
+            text-align: left;
+            width: 50%;
+            font-size: 20px;
+        }
+        span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('predict') }}">Home</a>
+        <a href="{{ url_for('about') }}" class="active">About the App</a>
+        <a href="{{ url_for('motivation') }}">Motivation</a>
+    </div>
+    <h1>About The App</h1>
+    <p>This app is the culmination of my final year thesis, featuring an ensemble 
+        machine learning model designed to predict ad clicks. The goal is to 
+        enhance the performance of existing models and provide Nigerian business 
+        owners with a tool to predict the success of their marketing campaigns better, 
+        helping them adopt strategies that maximize ROI. <br><br>
+
+        The model uses the Avazu dataset from Kaggle and extensive 
+        exploratory data analysis (EDA) to glean insights. Irrelevant features 
+        were dropped, and the remaining categorical variables were converted to 
+        numeric values before being fed into the model. We trained several individual 
+        models, including Logistic Regression, Decision Tree, Random Forest, and Naive Bayes, 
+        and combined them using a soft voting method. <br><br>
+        
+        The final model is deployed via Flask and is ready for use. <br><br>
+        
+        <span>How to Use the App:</span> <br><br>
+        
+        1. Save your dataset as a CSV file with the following features: id, 'site_id', 'site_domain','site_category', 'app_id', 'app_domain', 
+        'app_category', 'banner_pos','device_id','device_ip', 'device_model', 'device_type', 'device_conn_type'. <br>
+        2. click "Choose File" on the home page to upload your CSV. <br>
+        3. After uploading, click "Predict" to get predictions for each observation in your dataset.</p>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivation</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: top;
+            align-items: center;
+            margin-top: 2%;
+            background-color: cadetblue;
+        }
+
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 100px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            background-color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #0056b3;
+        }
+
+        .navbar a.active {
+            background-color: #004080;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        p {
+            text-align: left;
+            width: 50%;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('predict') }}">Home</a>
+        <a href="{{ url_for('about') }}">About the App</a>
+        <a href="{{ url_for('motivation') }}" class="active">Motivation</a>
+    </div>
+    <h1>Motivation</h1>
+    <p>Research on ad click-through rate (CTR) prediction has focused heavily on 
+        individual machine learning and deep learning models. While these 
+        approaches have their merits, studies suggest an ensemble model could 
+        enhance prediction accuracy. For instance, Muthaiah Ramanathan's study 
+        demonstrated that an ensemble model (ROC AUC = 0.91) outperformed 
+        individual models such as logistic regression (ROC AUC = 0.9), XGBoost 
+        (ROC AUC = 0.84), Random Forest (ROC AUC = 0.84), and Decision Tree 
+        (ROC AUC = 0.79). However, his research was constrained by the limited 
+        size of the dataset, using only 300,000 observations out of a possible 
+        700,000 due to computational demands. <br><br>
+
+        As the need for accurate ad click predictions becomes more critical, 
+        expanding the dataset to enhance the ensemble method's accuracy is crucial. 
+        This research aims to build an ensemble model using a more extensive dataset, 
+        potentially improving the success of online marketing campaigns by minimizing 
+        inefficiencies and capitalizing on opportunities.</p>
+</body>
+</html>
