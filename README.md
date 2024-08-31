@@ -32,8 +32,9 @@ The primary aim of this study is to design and implement computationally efficie
 
 3. **Download the Dataset**
     - Download the dataset from this this [link](ttps://www.kaggle.com/c/avazu-ctr-prediction/data)
-    - You don't need to downnload the dataset to run this code as the direct link to the balanced train  dataset has been provided in the notebook. 
-    - However, if you will like to work with the whole dataset, download in via the link above, unzip it and provide the path to the train dataset in the notebook. 
+    - You don't need to downnload the dataset to run this code as the needed dataset has been extracted, saved,zipped, and put in the same directory as the code.thus the code will run once the rerository is cloned and the notebook is run. 
+    - However, if you will like to work with the whole dataset, download in via the link above, unzip it and provide the path to the train dataset in the 
+ notebook under the "load the whole dataset".and uncomment resample_data function in the notebook. 
    
 
 4. **Run the Jupyter Notebook:**
